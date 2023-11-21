@@ -2,7 +2,10 @@
 @model Category
 
 @section title {
-    <h3>Category: @Model.CategoryId</h3>
+    @if (Model is not null)
+    {
+        <h3>Category: @Model.Name</h3>
+    }
 }
 
 
