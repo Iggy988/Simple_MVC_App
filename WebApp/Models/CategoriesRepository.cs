@@ -45,7 +45,7 @@ public class CategoriesRepository
         {
             return;
         }
-        var categoryToUpdate = GetCategoryById(categoryId);
+        var categoryToUpdate = _categories.FirstOrDefault(x => x.CategoryId == categoryId);
         if (categoryToUpdate != null)
         {
             //ovdje mozemo koristiti auto mapper
